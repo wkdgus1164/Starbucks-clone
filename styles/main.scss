@@ -734,3 +734,59 @@ section.pick-your-favorite {
     }
   }
 }
+
+/* RESERVE STORE */
+section.reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  .inner {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .medal {
+      width: 334px;
+      height: 334px;
+      perspective: 600px;
+
+      .front, .back {
+        width: 334px;
+        height: 334px;
+        backface-visibility: hidden;
+        transition: 1s;
+      }
+
+      .front {
+        position: absolute;
+        transform: rotateY(0deg);
+      }
+
+      .back {
+        transform: rotateY(-180deg);
+
+        .btn {
+          position: absolute;
+          top: 240px;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+
+      &:hover {
+        .front {
+          transform: rotateY(180deg);
+        }
+
+        .back {
+          transform: rotateY(0deg);
+        }
+      }
+    }
+  }
+}
