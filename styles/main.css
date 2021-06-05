@@ -248,6 +248,11 @@ header .badges .badge {
   top: 88px;
   left: -10px;
 }
+.visual .inner .title .btn {
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
 .visual .inner .cup1.image {
   position: absolute;
   bottom: 0;
