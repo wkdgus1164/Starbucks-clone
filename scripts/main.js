@@ -7,6 +7,8 @@ const fadeElements = document.querySelectorAll('.visual .fade-in');
 const promotionElement = document.querySelector('.promotion');
 const promotionToggleButton = document.querySelector('.toggle-promotion');
 const spyElements = document.querySelectorAll('section.scroll-spy');
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
 
 let isHidePromotion = false;
 
