@@ -474,5 +474,60 @@ header {
     .swiper-slide-active {
       opacity: 1;
     }
+
+    .swiper-pagination {
+      bottom: 40px;
+      left: 0;
+      right: 0;
+
+      .swiper-pagination-bullet {
+        background-color: transparent;
+        background-image: url("../images/promotion_slide_pager.png");
+        width: 12px;
+        height: 12px;
+        margin-right: 6px;
+        outline: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        background-image: url("../images/promotion_slide_pager_on.png");
+      }
+    }
+
+    .swiper-prev,
+    .swiper-next {
+      width: 42px;
+      height: 42px;
+      border: 2px solid #333;
+      border-radius: 50%;
+      position: absolute;
+      top: 300px;
+      z-index: 1;
+      cursor: pointer;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .4s;
+
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+
+    .swiper-prev {
+      left: 50%;
+      margin-left: -480px;
+    }
+
+    .swiper-next {
+      right: 50%;
+      margin-right: -480px;
+    }
   }
 }
