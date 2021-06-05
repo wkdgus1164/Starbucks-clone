@@ -3,7 +3,18 @@ const searchInputElement = searchElement.querySelector('input');
 const badgeElement = document.querySelector('header .badges');
 
 const handleWindowScroll = () => {
-  console.log('scroll');
+  console.log(window.scrollY);
+  if (window.scrollY > 500) {
+    gsap.to(badgeElement, .6, {
+      opacity: 0,
+      display: 'none',
+    })
+  } else {
+    gsap.to(badgeElement, .6, {
+      opacity: 1,
+      display: 'block',
+    })
+  }
 }
 
 const handleSearchElementClick = () => {
