@@ -5,7 +5,6 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
-  height: 3000px;
 }
 body img {
   display: block;
@@ -534,11 +533,6 @@ header .badges .badge {
   top: 350px;
   left: 150px;
 }
-.youtube .inner .floating3 {
-  position: absolute;
-  bottom: -200px;
-  right: 0;
-}
 
 #player {
   width: 100%;
@@ -546,6 +540,77 @@ header .badges .badge {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* SEASON PRODUCT */
+.season-product {
+  background-image: url("../images/season_product_bg.jpg");
+}
+.season-product .inner {
+  height: 400px;
+}
+.season-product .floating3 {
+  position: absolute;
+  top: -200px;
+  right: 0;
+}
+.season-product .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+.season-product .text-group .title {
+  margin-bottom: 10px;
+}
+.season-product .text-group .description {
+  margin-bottom: 15px;
+}
+/* RESERVE COFFEE */
+section.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
+}
+section.reserve-coffee .inner {
+  height: 400px;
+}
+section.reserve-coffee .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+section.reserve-coffee .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+section.reserve-coffee .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PICK YOUR FAVORITE */
+section.pick-your-favorite {
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.pick-your-favorite .inner {
+  padding: 110px 0;
+}
+section.pick-your-favorite .inner .text-group {
+  margin-left: 100px;
+  display: flex;
+  width: 262px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+section.pick-your-favorite .inner .text-group .title {
+  margin-bottom: 40px;
+}
+section.pick-your-favorite .inner .text-group .description {
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */
