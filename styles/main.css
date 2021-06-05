@@ -68,6 +68,32 @@ body .btn.btn--white:hover {
   color: #333;
   border-color: #fff;
 }
+body .back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+body .back-to-position.to-right {
+  transform: translateX(-150px);
+}
+body .back-to-position.to-left {
+  transform: translateX(150px);
+}
+body .show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+body .show .back-to-position.delay-0 {
+  transition-delay: 0s;
+}
+body .show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+body .show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+body .show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
 
 /* HEADER */
 header {

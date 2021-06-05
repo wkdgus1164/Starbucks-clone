@@ -1,14 +1,18 @@
+// Declarations
+
 const searchElement = document.querySelector('.search');
 const searchInputElement = searchElement.querySelector('input');
 const badgeElement = document.querySelector('header .badges');
 const fadeElements = document.querySelectorAll('.visual .fade-in');
 const promotionElement = document.querySelector('.promotion');
 const promotionToggleButton = document.querySelector('.toggle-promotion');
+const spyElements = document.querySelectorAll('section.scroll-spy');
 
 let isHidePromotion = false;
 
+const random = (min, max) => parseFloat((Math.random() * (max - min) + min).toFixed(2));
+
 const handleWindowScroll = () => {
-  console.log(window.scrollY);
   if (window.scrollY > 500) {
     gsap.to(badgeElement, .6, {
       opacity: 0,
@@ -21,8 +25,6 @@ const handleWindowScroll = () => {
     })
   }
 }
-
-const random = (min, max) => parseFloat((Math.random() * (max - min) + min).toFixed(2));
 
 const floatingObject = (selector, delay, size) => {
   gsap.to(selector, random(1.5, 2.5), {
@@ -38,16 +40,10 @@ floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
 
-fadeElements.forEach((fadeElement, index) => {
-  gsap.to(fadeElement, 1, {
-    delay: (index + 1) * .7,
-    opacity: 1,
-  });
-});
 
-const handleSearchElementClick = () => {
-  searchInputElement.focus();
-}
+// Functions
+
+const handleSearchElementClick = () => searchInputElement.focus();
 
 const handleSearchInputElementFocus = () => {
   searchElement.classList.add('focused');
@@ -69,11 +65,15 @@ const handlePromotionToggleButtonClick = () => {
   }
 }
 
+// Listeners
+
 window.addEventListener('scroll', _.throttle(handleWindowScroll, 300));
 searchElement.addEventListener('click', handleSearchElementClick);
 searchInputElement.addEventListener('focus', handleSearchInputElementFocus);
 searchInputElement.addEventListener('blur', handleSearchInputElementBlur);
 promotionToggleButton.addEventListener('click', handlePromotionToggleButtonClick);
+
+// Libraries
 
 new Swiper('.notice-line .swiper-container', {
   direction: 'vertical',
@@ -98,3 +98,20 @@ new Swiper('.promotion .swiper-container', {
     nextEl: '.promotion .swiper-next',
   }
 });
+
+fadeElements.forEach((fadeElement, index) => {
+  gsap.to(fadeElement, 1, {
+    delay: (index + 1) * .7,
+    opacity: 1,
+  });
+});
+
+spyElements.forEach(spyElement => {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyElement,
+      triggerHook: .8,
+    })
+    .setClassToggle(spyElement, 'show')
+    .addTo(new ScrollMagic.Controller());
+})
