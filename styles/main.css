@@ -364,5 +364,34 @@ header .badges .badge {
 .notice .notice-line .inner .inner__right .toggle-promotion .material-icons {
   font-size: 30px;
 }
+.notice .promotion {
+  height: 693px;
+  background-color: #f6f5ef;
+  position: relative;
+  transition: height 0.4s;
+}
+.notice .promotion .swiper-container {
+  width: calc(819px * 3 + 20px);
+  height: 553px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: calc((819px * 3 + 20px) / -2);
+}
+.notice .promotion .swiper-slide {
+  width: auto;
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+.notice .promotion .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.notice .promotion .swiper-slide-active {
+  opacity: 1;
+}
 
 /*# sourceMappingURL=main.css.map */
