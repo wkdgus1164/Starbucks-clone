@@ -39,6 +39,46 @@ body {
       background-color: #333;
       color: #fff;
     }
+
+    &.btn--reverse {
+      background-color: #333;
+      color: #fff;
+
+      &:hover {
+        background-color: transparent;
+        color: #333;
+      }
+    }
+
+    &.btn--brown {
+      color: #592B18;
+      border-color: #592B18;
+
+      &:hover {
+        color: #fff;
+        background-color: #592B18;
+      }
+    }
+
+    &.btn--gold {
+      color: #D9AA8A;
+      border-color: #D9AA8A;
+
+      &:hover {
+        color: #fff;
+        border-color: #D9AA8A;
+      }
+    }
+
+    &.btn--white {
+      color: #fff;
+      border-color: #fff;
+
+      &:hover {
+        color: #333;
+        border-color: #fff;
+      }
+    }
   }
 }
 
