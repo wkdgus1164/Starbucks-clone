@@ -32,6 +32,7 @@ body {
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
+    background-color: transparent;
     display: block;
     transition: .4s;
 
@@ -533,6 +534,55 @@ header {
     .swiper-next {
       right: 50%;
       margin-right: -480px;
+    }
+  }
+}
+
+.rewards {
+  position: relative;
+
+  .bg-left {
+    width: 50%;
+    height: 100%;
+    background-color: #272727;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .bg-right {
+    width: 50%;
+    height: 100%;
+    background-color: #d5c798;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .inner {
+    background-image: url("../images/rewards.jpg");
+    height: 241px;
+  }
+
+  .btn-group {
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .sign-up {
+      margin-right: 10px;
+    }
+
+    .sign-in {
+      width: 110px;
+    }
+
+    .gift {
+      margin-top: 10px;
+      flex-grow: 1;
     }
   }
 }
