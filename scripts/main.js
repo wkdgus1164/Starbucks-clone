@@ -7,8 +7,9 @@ const fadeElements = document.querySelectorAll('.visual .fade-in');
 const promotionElement = document.querySelector('.promotion');
 const promotionToggleButton = document.querySelector('.toggle-promotion');
 const spyElements = document.querySelectorAll('section.scroll-spy');
+const toTopElement = document.querySelector('#to-top');
 const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
+thisYear.textContent = new Date().getFullYear().toString();
 
 let isHidePromotion = false;
 
@@ -19,12 +20,18 @@ const handleWindowScroll = () => {
     gsap.to(badgeElement, .6, {
       opacity: 0,
       display: 'none',
-    })
+    });
+    gsap.to(toTopElement, .2, {
+      x: 0,
+    });
   } else {
     gsap.to(badgeElement, .6, {
       opacity: 1,
       display: 'block',
-    })
+    });
+    gsap.to(toTopElement, .2, {
+      x: 100,
+    });
   }
 }
 
@@ -67,6 +74,12 @@ const handlePromotionToggleButtonClick = () => {
   }
 }
 
+const handleToTopElementClick = () => {
+  gsap.to(window, .7, {
+    scrollTo: 0,
+  });
+}
+
 // Listeners
 
 window.addEventListener('scroll', _.throttle(handleWindowScroll, 300));
@@ -74,6 +87,8 @@ searchElement.addEventListener('click', handleSearchElementClick);
 searchInputElement.addEventListener('focus', handleSearchInputElementFocus);
 searchInputElement.addEventListener('blur', handleSearchInputElementBlur);
 promotionToggleButton.addEventListener('click', handlePromotionToggleButtonClick);
+
+toTopElement.addEventListener('click', handleToTopElementClick);
 
 // Libraries
 
