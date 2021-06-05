@@ -10,12 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="stylesheet" href="./styles/main.css"/>
+
+  <!-- LODASH -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
           integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
           integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script type="text/javascript" defer src="./scripts/main.js"></script>
 </head>
 <body>
@@ -386,7 +395,22 @@
     <div class="inner">
       <div class="inner__left">
         <h2>공지사항</h2>
-        <div class="swiper-container"></div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 안내</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">스타벅스커피 코리아 애플리케이션 이밴트</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 안내</a>
+            </div>
+          </div>
+        </div>
         <a href="javascript:void(0)" class="notice-line__more">
           <span class="material-icons">add_circle</span>
         </a>

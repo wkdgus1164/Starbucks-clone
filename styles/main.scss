@@ -387,8 +387,17 @@ header {
 
         .swiper-container {
           height: 62px;
-          background-color: orange;
           flex-grow: 1;
+
+          .swiper-slide {
+            height: 62px;
+            display: flex;
+            align-items: center;
+
+            a {
+              color: #fff;
+            }
+          }
         }
 
         .notice-line__more {
